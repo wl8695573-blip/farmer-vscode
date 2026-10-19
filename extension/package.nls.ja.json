@@ -1,0 +1,17 @@
+{
+  "command.settings": "農場主",
+  "command.preview": "鞭を試す",
+  "command.pause": "停止・再開",
+  "command.clearComments": "現在の仮想コメントを消す",
+  "command.restart": "デスクトップ側を再起動",
+  "setting.enabled": "自動フィードバック",
+  "setting.language": "コメントの言語",
+  "setting.showComments": "エラーコメントを表示",
+  "setting.material": "鞭の素材",
+  "setting.intensity": "画面の揺れ",
+  "setting.sound": "鞭の音",
+  "setting.volume": "音量",
+  "setting.reducedMotion": "動きを減らす（鞭を非表示）",
+  "extension.displayName": "農場主",
+  "extension.description": "農場主がコードを監視。新しい赤いエラーで鞭を振り、行・列・原因を辛辣なコメントで示します。"
+}

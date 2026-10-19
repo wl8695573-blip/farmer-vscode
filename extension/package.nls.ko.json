@@ -1,0 +1,17 @@
+{
+  "command.settings": "농장주",
+  "command.preview": "채찍 미리 보기",
+  "command.pause": "정지 또는 재개",
+  "command.clearComments": "현재 가상 주석 지우기",
+  "command.restart": "데스크톱 구성 요소 재시작",
+  "setting.enabled": "자동 피드백 켜기",
+  "setting.language": "주석 언어",
+  "setting.showComments": "오류 주석 표시",
+  "setting.material": "채찍 소재",
+  "setting.intensity": "화면 흔들림",
+  "setting.sound": "채찍 소리",
+  "setting.volume": "음량",
+  "setting.reducedMotion": "동작 줄이기 (채찍 숨김)",
+  "extension.displayName": "농장주",
+  "extension.description": "농장주가 코드를 감시합니다. 새 빨간 오류에 채찍을 휘두르고 위치와 원인을 거친 주석으로 표시합니다."
+}

@@ -1,0 +1,20 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {DiagnosticLedger}=require('../src/diagnostics'),{comment,commentText}=require('../src/messages');
+const ledger=new DiagnosticLedger(),error={source:'ts',code:1005,message:"'}' expected.",line:2,column:8};
+assert.equal(ledger.update('a',[error]).added.length,1,'first red diagnostic reacts immediately');
+assert.equal(ledger.update('a',[error]).added.length,0,'duplicate notifications do not react twice');
+assert.equal(ledger.update('a',[{...error,line:20}]).added.length,0,'moving a red mark does not create a new error');
+assert.equal(ledger.update('a',[error,{...error,line:7}]).added.length,1,'another occurrence of the same error reacts');
+assert.equal(ledger.update('a',[error]).cleared,false,'partial removal is not a fully cleared file');
+assert.equal(ledger.update('a',[]).cleared,true);assert.equal(ledger.update('a',[]).cleared,false,'cleared transition occurs once');
+for(let i=0;i<12;i++){assert.equal(ledger.update('a',[error]).added.length,1);assert.equal(ledger.update('a',[]).cleared,true);}
+assert.equal(ledger.update('b',[]).cleared,false,'opening clean code is not a cleared transition');
+assert.match(comment(error,'zh-CN'),/第3行第9列/);assert.match(comment(error,'zh-CN'),/少了“}”/);
+assert.match(comment({...error,message:'应为“)”'},'zh-CN'),/少了“\)”/);
+assert.match(comment({...error,code:2322,message:"Type 'string' is not assignable to type 'number'."},'zh-CN'),/类型/);
+assert.match(comment({...error,code:1128,message:'Declaration or statement expected.',token:'}'},'zh-CN'),/不该出现/);
+const unknown=comment({...error,code:'some-plugin',source:'external',message:'Unknown failure\nwith <b>markup</b>'},'zh-CN');assert.ok(unknown.includes('Unknown failure with <b>markup</b>'));assert.ok(!unknown.includes('\n'));
+for(const language of ['zh-CN','en','ja','ko','fr','ru'])assert.ok(!comment(error,language).includes('{line}'));
+assert.ok(commentText('test','python').startsWith('# '));assert.ok(commentText('test','csharp').startsWith('// '));assert.ok(commentText('test','html').startsWith('<!-- '));
+console.log('Passed direct red-mark transitions, unlimited repeat mistakes, partial/full repair, position tracking, known diagnostic reasons and six languages.');

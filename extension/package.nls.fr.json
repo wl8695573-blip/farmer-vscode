@@ -1,0 +1,17 @@
+{
+  "command.settings": "Le Fermier",
+  "command.preview": "Tester le fouet",
+  "command.pause": "Pause ou reprise",
+  "command.clearComments": "Effacer les commentaires virtuels",
+  "command.restart": "Redémarrer le composant",
+  "setting.enabled": "Activer les réactions",
+  "setting.language": "Langue des commentaires",
+  "setting.showComments": "Afficher les commentaires",
+  "setting.material": "Matière du fouet",
+  "setting.intensity": "Secousse de l’écran",
+  "setting.sound": "Son du fouet",
+  "setting.volume": "Volume",
+  "setting.reducedMotion": "Réduire les mouvements (masquer le fouet)",
+  "extension.displayName": "Le Fermier",
+  "extension.description": "Le Fermier surveille le code : les nouvelles erreurs rouges déclenchent le fouet et un commentaire cru indiquant leur position et leur cause."
+}

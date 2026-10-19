@@ -1,0 +1,139 @@
+{
+  "name": "code-whip",
+  "displayName": "%extension.displayName%",
+  "description": "%extension.description%",
+  "publisher": "local-farm-tools",
+  "version": "0.8.3",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeWhip.settings",
+        "title": "%command.settings%",
+        "category": "%extension.displayName%"
+      },
+      {
+        "command": "codeWhip.preview",
+        "title": "%command.preview%",
+        "category": "%extension.displayName%"
+      },
+      {
+        "command": "codeWhip.pause",
+        "title": "%command.pause%",
+        "category": "%extension.displayName%"
+      },
+      {
+        "command": "codeWhip.clearComments",
+        "title": "%command.clearComments%",
+        "category": "%extension.displayName%"
+      },
+      {
+        "command": "codeWhip.restart",
+        "title": "%command.restart%",
+        "category": "%extension.displayName%"
+      }
+    ],
+    "configuration": {
+      "title": "%extension.displayName%",
+      "properties": {
+        "codeWhip.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "%setting.enabled%"
+        },
+        "codeWhip.language": {
+          "type": "string",
+          "default": "auto",
+          "description": "%setting.language%",
+          "enum": [
+            "auto",
+            "zh-CN",
+            "en",
+            "ja",
+            "ko",
+            "fr",
+            "ru"
+          ]
+        },
+        "codeWhip.showComments": {
+          "type": "boolean",
+          "default": true,
+          "description": "%setting.showComments%"
+        },
+        "codeWhip.material": {
+          "type": "string",
+          "default": "leather",
+          "description": "%setting.material%",
+          "enum": [
+            "leather",
+            "braided",
+            "rubber"
+          ]
+        },
+        "codeWhip.intensity": {
+          "type": "string",
+          "default": "light",
+          "description": "%setting.intensity%",
+          "enum": [
+            "off",
+            "light",
+            "medium",
+            "strong"
+          ]
+        },
+        "codeWhip.sound": {
+          "type": "boolean",
+          "default": true,
+          "description": "%setting.sound%"
+        },
+        "codeWhip.volume": {
+          "type": "number",
+          "default": 0.25,
+          "description": "%setting.volume%",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "codeWhip.reducedMotion": {
+          "type": "boolean",
+          "default": false,
+          "description": "%setting.reducedMotion%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "check": "node --check src/extension.js",
+    "test": "node tests/diagnostics.test.js",
+    "build:desktop": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-desktop.ps1"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": {
+      "supported": false
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wl8695573-blip/farmer-vscode.git"
+  },
+  "homepage": "https://github.com/wl8695573-blip/farmer-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/wl8695573-blip/farmer-vscode/issues"
+  }
+}

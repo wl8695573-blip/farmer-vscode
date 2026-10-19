@@ -1,0 +1,8 @@
+*.vsix
+*.vsix.sha256
+*.zip
+*.log
+node_modules/
+__pycache__/
+.vscode/
+.DS_Store

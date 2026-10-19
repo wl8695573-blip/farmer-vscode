@@ -1,0 +1,17 @@
+{
+  "command.settings": "Farmer",
+  "command.preview": "Preview whip",
+  "command.pause": "Pause or resume",
+  "command.clearComments": "Clear virtual comments in current file",
+  "command.restart": "Restart desktop helper",
+  "setting.enabled": "Enable automatic feedback",
+  "setting.language": "Comment language",
+  "setting.showComments": "Show error comments",
+  "setting.material": "Whip material",
+  "setting.intensity": "Screen shake",
+  "setting.sound": "Play whip sound",
+  "setting.volume": "Volume",
+  "setting.reducedMotion": "Reduced motion (hide whip)",
+  "extension.displayName": "Farmer",
+  "extension.description": "Farmer watches your code: new red errors trigger a whip and blunt inline comments with the location and cause."
+}

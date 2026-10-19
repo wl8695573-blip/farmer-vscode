@@ -1,0 +1,17 @@
+{
+  "command.settings": "农场主",
+  "command.preview": "预览鞭子",
+  "command.pause": "暂停或恢复",
+  "command.clearComments": "清除当前文件的虚拟注释",
+  "command.restart": "重启桌面组件",
+  "setting.enabled": "启用自动反馈",
+  "setting.language": "台词语言",
+  "setting.showComments": "显示错误注释",
+  "setting.material": "鞭子材质",
+  "setting.intensity": "屏幕抖动",
+  "setting.sound": "播放鞭响",
+  "setting.volume": "音量",
+  "setting.reducedMotion": "减少动态效果（不显示鞭子）",
+  "extension.displayName": "农场主",
+  "extension.description": "农场主盯着你的代码：新增红色错误时抽鞭，用粗俗注释指出行号、列号和报错原因。"
+}

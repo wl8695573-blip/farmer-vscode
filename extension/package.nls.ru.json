@@ -1,0 +1,17 @@
+{
+  "command.settings": "Фермер",
+  "command.preview": "Показать кнут",
+  "command.pause": "Пауза или продолжение",
+  "command.clearComments": "Очистить виртуальные комментарии",
+  "command.restart": "Перезапустить компонент",
+  "setting.enabled": "Автоматическая реакция",
+  "setting.language": "Язык комментариев",
+  "setting.showComments": "Показывать комментарии",
+  "setting.material": "Материал кнута",
+  "setting.intensity": "Тряска экрана",
+  "setting.sound": "Звук кнута",
+  "setting.volume": "Громкость",
+  "setting.reducedMotion": "Уменьшить движение (скрыть кнут)",
+  "extension.displayName": "Фермер",
+  "extension.description": "Фермер следит за кодом: новая красная ошибка запускает кнут и грубый комментарий с местом и причиной ошибки."
+}
